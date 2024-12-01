@@ -68,8 +68,8 @@
   	</dependency>
   	<dependency>
   		<groupId>org.seleniumhq.selenium</groupId>
-  		<artifactId>selenium-devtools-v111</artifactId>
-  		<version>4.9.0</version>
+  		<artifactId>selenium-devtools-v131</artifactId>
+  		<version>4.27.0</version>
   	</dependency>
   </dependencies>
 </project>
