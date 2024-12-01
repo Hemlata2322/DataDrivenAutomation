@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 public class ValidateLoginFunctionality extends DriverInstance {
 //(dataProvider = "Excel", dataProviderClass=DataGenerator.class)
 	//String uName, String Pwd
+	
 	@Test
 	public void VerifyLoginFunctionality() {
 		LoginPage loginPage = new LoginPage(driver);

@@ -32,11 +32,6 @@
   </build>
   <dependencies>
   	<dependency>
-  		<groupId>com.relevantcodes</groupId>
-  		<artifactId>extentreports</artifactId>
-  		<version>2.41.2</version>
-  	</dependency>
-  	<dependency>
   		<groupId>org.seleniumhq.selenium</groupId>
   		<artifactId>selenium-java</artifactId>
   		<version>4.10.0</version>
@@ -55,6 +50,26 @@
   		<groupId>org.apache.poi</groupId>
   		<artifactId>poi-ooxml</artifactId>
   		<version>5.2.3</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.aventstack</groupId>
+  		<artifactId>extentreports</artifactId>
+  		<version>5.1.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.fasterxml.jackson.core</groupId>
+  		<artifactId>jackson-databind</artifactId>
+  		<version>2.15.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.fasterxml.jackson.core</groupId>
+  		<artifactId>jackson-core</artifactId>
+  		<version>2.15.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.seleniumhq.selenium</groupId>
+  		<artifactId>selenium-devtools-v111</artifactId>
+  		<version>4.9.0</version>
   	</dependency>
   </dependencies>
 </project>
