@@ -1,8 +1,8 @@
-package org.automation.testingworld.assertions;
+package org.automation.testingworld.commonLibrary;
 
 import org.openqa.selenium.WebDriver;
 
-public class Compare {
+public class CommonAssertions {
 	
 	public static boolean validatePageURL(WebDriver driver, String expectedURL)
 	{

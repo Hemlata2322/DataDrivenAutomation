@@ -5,27 +5,45 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
+import org.openqa.selenium.support.PageFactory;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.automation.testingworld.base.DriverInstance;
-import org.automation.testingworld.pages.LoginPage;
+import org.automation.testingworld.commonLibrary.CommonAssertions;
+import org.automation.testingworld.testbase.TestBase;
+import org.automation.testingworld.webpages.LoginPage;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class ValidateLoginFunctionality extends DriverInstance {
+public class ValidateLoginFunctionality extends TestBase {
 //(dataProvider = "Excel", dataProviderClass=DataGenerator.class)
 	//String uName, String Pwd
 	
+	public LoginPage loginPage ;
+	
+	@BeforeClass
+	public void initializePage()
+	{
+		loginPage = PageFactory.initElements(driver, LoginPage.class);
+		
+	}
+		
 	@Test
 	public void VerifyLoginFunctionality() {
-		LoginPage loginPage = new LoginPage(driver);
+		// Create the Extent Test before each test method starts
+      // String testName = this.getClass().getSimpleName();
+       // extentReport.createExtentTest(testName);
+	//	extentReport.createExtentTest("Login functionality test");
 		loginPage.switchToLoginTab();
 		loginPage.enterUsername("test");
 		loginPage.enterPassword("test");
+		loginPage.clickKeepMeLoggedInBtn();
 		loginPage.clickLogin();
+		CommonAssertions.validatePageTitle(driver, "");
+		log.info("Successfully logged in.");
+		
 	}
 	
 	//This method is read excel data from onedrive which is not working as of now

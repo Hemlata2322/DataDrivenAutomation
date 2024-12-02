@@ -3,7 +3,7 @@ package org.automation.testingworld.utility;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class Utility {
+public class PropertyFileReader {
 
 	public static String fetchPropertyValue(String key)
 	{
